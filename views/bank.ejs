@@ -1,0 +1,24 @@
+<%- include("header") -%>
+
+<div class="wrapper">
+    <div class="nested-wrapper">
+        <div class="content">
+            <img class="bank-image" src="/images/bank.png" alt="BANK">
+            <h1>WELCOME TO YOUR ONLINE BANK!</h1>
+            <p>Best place to keep your Money Secure</p>
+        </div>
+    </div>
+    
+</div>
+<script >
+    $(document).ready(function(){
+        $("#footer").css("display","none");
+        $("#search-box").css("display","none");
+        let bodyHeight = $(document).outerHeight();
+            let footerHeight = $(".navbar").outerHeight();
+            let bodyWrapperHeight = bodyHeight-footerHeight;
+            $(".wrapper").css('height',`${bodyWrapperHeight}px`);
+    });
+</script>
+
+<%-include("footer")-%>
